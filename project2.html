@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* utilies classes */
+        .flex {
+            display: flex;
+        }
+
+        .space-bt {
+            justify-content: space-between;
+        }
+
+        .item-center {
+            justify-content: center;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        .btn {
+            font-size: 20px;
+            color: white;
+            background-color: darkred;
+            padding: 15px 50px;
+        }
+
+        .btn:hover {
+            background-color: darkblue;
+            border: 5px solid while;
+        }
+
+
+
+        /* css properties */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* header stying */
+        .header {
+            background-color: darkred;
+            height: 100px;
+        }
+
+        /* header logo left styling */
+        .left {
+            /* margin-top: 40px; */
+        }
+
+        .header .left img {
+            margin-top: 20px;
+            margin-left: 70px;
+
+        }
+
+        /* header right nav styling */
+        .right {
+            margin-top: 30px;
+            margin-right: 50px;
+        }
+
+        .header .right ul li {
+            list-style-type: none;
+        }
+
+        .header .right a {
+            text-decoration: none;
+            color: aqua;
+            font-size: 20px;
+            padding: 36px;
+
+        }
+
+        .header .right a:hover {
+            background-color: white;
+            color: darkred;
+        }
+
+        /* main body styling */
+        .main {
+            background-color: aqua;
+            height: 7000px;
+        }
+
+        /* mian first line styling */
+        .main .first {
+            position: relative;
+            top: 30px;
+        }
+
+        .main .first h1 {
+            font-size: 60px;
+            word-spacing: 20px;
+            color: darkred;
+
+        }
+
+        /* main box styling */
+        .main .box1 {
+            background-color: darkblue;
+            display: inline-block;
+            position: relative;
+            left: 38%;
+            top: 58px;
+            color: white;
+
+            padding: 10px 50px;
+            width: 23%;
+            border-radius: 30px;
+        }
+
+        .box1 p {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .input {
+            position: relative;
+            top: 140px;
+            left: 30%;
+
+        }
+
+        .input select {
+            border: 2px solid darkred;
+            background-color: lightgreen;
+            width: 170px;
+            height: 60px;
+            margin-right: 50px
+        }
+
+        .input input {
+            width: 500px;
+            height: 60px;
+            border: 2px solid lightgreen;
+            background-color: darkgreen;
+            color: lightgreen;
+            font-size: 20px;
+        }
+
+        .order-btn {
+            position: relative;
+            top: 220px;
+
+            left: 45%;
+        }
+
+        .quick {
+            font-size: 60px;
+            word-spacing: 20px;
+            color: darkred;
+            position: relative;
+            top: 260px;
+            font-weight: bolder;
+        }
+
+        .boxes {
+            position: relative;
+            top: 360px;
+            width: 100%;
+        }
+
+        .boxes .one {
+            background-color: lightslategray;
+            border: 2px solid darkred;
+            padding: 80px;
+            border-radius: 30px;
+
+
+            margin-right: 70px;
+        }
+
+        .boxes .two {
+            border-radius: 30px;
+            background-color: lightslategray;
+            border: 2px solid darkred;
+            padding: 80px;
+
+
+            margin-right: 70px;
+        }
+
+        .boxes .three {
+            border-radius: 30px;
+            background-color: lightslategray;
+            border: 2px solid darkred;
+            padding: 80px;
+
+
+            margin-right: 70px;
+        }
+
+        .boxes .four {
+            border-radius: 30px;
+            background-color: lightslategray;
+            border: 2px solid darkred;
+            padding: 80px;
+
+
+            margin-right: 70px;
+
+        }
+
+        .boxes .one:hover {
+            background-color: white;
+            border: 7px solid white;
+        }
+
+        .boxes .two:hover {
+            background-color: darkblue;
+        }
+
+        .boxes .three:hover {
+            background-color: darkblue;
+        }
+
+        .boxes .four:hover {
+            background-color: darkblue;
+        }
+
+        .boxes img {
+            width: 140px;
+        }
+
+        .heading {
+            position: relative;
+            top: 400px;
+            left: -320px;
+            font-size: 50px;
+            color: darkblue;
+            font-weight: bolder;
+
+        }
+
+        .breakfast {
+            text-align: center;
+            position: relative;
+            left: 40px;
+        }
+
+        .delivery {
+            text-align: center;
+            position: relative;
+            left: 220px;
+        }
+
+        .dinner {
+
+            text-align: center;
+            position: relative;
+            left: 360px;
+        }
+
+        .coffee {
+            text-align: center;
+            position: relative;
+            left: 570px;
+        }
+
+        .bigbox {
+            position: relative;
+            top: 500px;
+            justify-content: space-around;
+        }
+
+        .leftbox {
+
+            border: 3px solid red;
+            width: 600px;
+            height: 300px;
+            background-color: black;
+
+
+        }
+
+        .leftbox img {
+            position: absolute;
+            top: 70px;
+            left: 430px;
+        }
+
+        .rightbox {
+            border: 3px solid red;
+            width: 600px;
+            height: 300px;
+            background-color: black;
+        }
+
+        .rightbox img {
+            position: absolute;
+            top: 70px;
+            right: 430px;
+        }
+
+        .twobtn {
+            position: relative;
+            top: 560px;
+            justify-content: space-around;
+            font-size: 50px;
+            text-align: center;
+            color: darkblue;
+            font-weight: bolder;
+        }
+
+        .collection {
+            position: relative;
+            top: 670px;
+            left: 490px;
+            font-size: 80px;
+            color: darkslategray;
+            font-weight: bolder;
+        }
+
+        .information {
+            position: relative;
+            top: 700px;
+            left: 400px;
+
+        }
+
+        .information .left img {
+            width: 600px;
+            margin-right: 120px;
+            border: 7px solid darkolivegreen;
+        }
+
+        .information .right h3 {
+            font-size: 50px;
+            color: darkred;
+        }
+
+        .information .right p {
+            font-size: 20px;
+            color: darkolivegreen;
+            margin-bottom: 35px;
+        }
+        .information2{
+            position: relative;
+            top: 1000px;
+            left: 400px;
+        }
+        .information2 .left img {
+            width: 600px;
+            margin-right: 120px;
+            border: 7px solid darkolivegreen;
+        }
+
+        .information2 .right h3 {
+            font-size: 50px;
+            color: darkred;
+        }
+
+        .information2 .right p {
+            font-size: 20px;
+            color: darkolivegreen;
+            margin-bottom: 35px;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="header flex space-bt">
+        <div class="left">
+            <img src="logo.png" alt="">
+        </div>
+        <div class="right">
+            <div class="nav">
+                <ul class="flex">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT </a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">ORDER</a></li>
+                    <li><a href="#">E-MAIN</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="first">
+            <h1 class="flex item-center">Find The Best Restaurants</h1>
+            <h1 class="flex item-center">Cafes And Bars in</h1>
+        </div>
+        <div class="box1 ">
+            <p class="">YOUR CITY</p>
+        </div>
+        <div class="input">
+            <select name="" id="">
+                <optgroup label="Select One">
+                    <option value="one">All Category</option>
+                    <option value="TWO">TWO</option>
+                    <option value="THREE">THREE</option>
+                    <option value="FOUR">FOUR</option>
+                    <option value="FOUR">FOUR</option>
+                </optgroup>
+            </select>
+            <input type="text" placeholder="Search this blog">
+        </div>
+        <div class="order-btn">
+            <button class="btn">Order Now</button>
+        </div>
+        <div class="quick flex item-center">
+            Quick Search
+        </div>
+        <div class="boxes flex item-center">
+            <div class="one">
+                <img src="delivery-img.png" alt="">
+            </div>
+            <div class="two">
+                <img src="breakfast-img.png" alt="">
+            </div>
+            <div class="three">
+                <img src="dinner-img.png" alt="">
+            </div>
+            <div class="four">
+                <img src="coffee-img.png" alt="">
+            </div>
+        </div>
+        <div class="heading  flex item-center">
+            <div class="breakfast">Breakfast<br>
+                <button class="bton1 btn">SEE MORE</button>
+            </div>
+            <div class="delivery">Delivery<br>
+                <button class="bton2 btn">SEE MORE</button>
+            </div>
+            <div class="dinner ">Dinner<br>
+                <button class="bton3 btn">SEE MORE</button>
+            </div>
+            <div class="coffee ">Coffee<br>
+                <button class="bton4 btn">SEE MORE</button>
+            </div>
+        </div>
+        <div class="bigbox  flex ">
+            <div class="leftbox">
+                <img src="alcohol-img.png" alt="" height="100px">
+            </div>
+            <div class="rightbox">
+                <img src="diningtable-img.png" alt="" height="100px">
+            </div>
+
+        </div>
+        <div class="twobtn flex">
+            <div class="alcohol">Alcohol<br>
+                <button class="bton1 btn">SEE MORE</button>
+            </div>
+            <div class="diningtable">Diningtable<br>
+                <button class="bton2 btn">SEE MORE</button>
+            </div>
+        </div>
+        <div class="collection">
+            Collection Food In City
+        </div>
+        <div class="information flex">
+            <div class="left">
+                <img src="blog-img1.png" alt="">
+            </div>
+            <div class="right">
+                <h3>This Week going</h3>
+                <p>Long established fact that a reader <br> will be distracted by the readble <br> content of a page
+                    when we looking at its<br>
+                    layout. the point of using Lorem <br> Ipsum is that it has a more or less <br> normal distribution
+                    of letters as
+                    <br>opposed
+                </p><br>
+                <button class="btn">READ MORE</button>
+
+            </div>
+            <div class="information2 flex">
+                <div class="left">
+                    <img src="blog-img1.png" alt="">
+                </div>
+                <div class="right">
+                    <h3>This Week going</h3>
+                    <p>Long established fact that a reader <br> will be distracted by the readble <br> content of a page
+                        when we looking at its<br>
+                        layout. the point of using Lorem <br> Ipsum is that it has a more or less <br> normal distribution
+                        of letters as
+                        <br>opposed
+                    </p><br>
+                    <button class="btn">READ MORE</button>
+    
+                </div>
+
+                <div class="information2 flex">
+                    <div class="left">
+                        <img src="blog-img2.png" alt="">
+                    </div>
+                    <div class="right">
+                        <h3>This Week going</h3>
+                        <p>Long established fact that a reader <br> will be distracted by the readble <br> content of a page
+                            when we looking at its<br>
+                            layout. the point of using Lorem <br> Ipsum is that it has a more or less <br> normal distribution
+                            of letters as
+                            <br>opposed
+                        </p><br>
+                        <button class="btn">READ MORE</button>
+        
+                    </div>
+
+
+        </div>
+
+</body>
+
+</html>
